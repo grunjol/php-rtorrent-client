@@ -118,7 +118,7 @@ class Client {
 		foreach ($this->execute($method, $params)->getMethod($method) AS $i => $data)
 		{
 			// Multi-Request
-			if (is_array($data[0]))
+			if (isset($data[0]) && is_array($data[0]))
 			{
 				foreach ($data AS $result)
 				{

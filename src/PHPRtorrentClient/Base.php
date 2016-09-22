@@ -43,7 +43,7 @@ class Base {
 	
 	private function __findVariable($name)
 	{
-		if ($this->variable_cache[$name])
+		if (isset($this->variable_cache[$name]))
 		{
 			return $this->variable_cache[$name];
 		}
